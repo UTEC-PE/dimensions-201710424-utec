@@ -11,10 +11,13 @@ struct Dimensions {
         int lineal = 0;
         int factor_dimensional = 1;
         for (int i = 0; i < dimensions; i++) {
+          //lineal += coordinates[i] * factor_dimensional;
           lineal += coordinates[dimensions-i-1] * factor_dimensional;
-          if (i+1!=dimensions) {
+          //factor_dimensional *= sizes[i];
+          factor_dimensional *= sizes[dimensions-i-1];
+          /*if (i+1!=dimensions) {
             factor_dimensional *= sizes[dimensions-i-1];
-          }
+          }*/
         }
         return lineal;
     }

@@ -37,7 +37,6 @@ class Vector {
 
         ~Vector(){
           delete[] this->data;
-          delete[] this-> dimensionSizes;
         };
 };
 
